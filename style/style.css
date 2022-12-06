@@ -120,4 +120,5 @@ body {
 }
 .seacrh__butt-text:hover {
   border: 2px solid #5a9e89;
+  cursor: pointer;
 }
