@@ -5,6 +5,7 @@ const stats = document.querySelector("status");
 
 const currCity = document.getElementById("currCity");
 const tempValue = document.getElementById("tempValue");
+const weatherIco = document.getElementById("weatherIco");
 
 // let url = `http://api.openweathermap.org/geo/1.0/direct?q=${city},BY&appid=9852ba4ce54f5e1ee00dcc5331937ad8`;
 // let url1 =
@@ -19,16 +20,19 @@ async function getFetch(url) {
   try {
     const response = await fetch(url);
     const data = await response.json();
-    const temp = data?.main?.temp;
-    const city = data?.name;
-    addWeatherCard(city, temp);
+    const city = await data?.name;
+    const temp = await data?.main?.temp;
+    const currWeatherIco = await data?.weather[0]?.icon;
+    addWeatherCard(city, temp, currWeatherIco);
     console.log(data); //!!
   } catch (err) {
     console.log(err);
   }
 }
 
-function addWeatherCard(city, temp) {
+function addWeatherCard(city, temp, currWeatherIco) {
   currCity.innerHTML = city;
+  const weatherUrl = `http://openweathermap.org/img/wn/${currWeatherIco}.png`;
+  weatherIco.style.backgroundImage = `url('${weatherUrl}')`;
   tempValue.innerHTML = `${temp} &#176C`;
 }

@@ -129,15 +129,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 200px;
-  height: 300px;
-  background-color: #777;
+  width: 300px;
+  height: 400px;
+  background-color: #ccc;
   border-radius: 30px;
   border: 2px solid #000;
 }
 
 .city__name {
-  margin-top: 20px;
+  margin: 20px 0 0 0;
 }
 
 .curr__city {
@@ -146,8 +146,22 @@ body {
   color: #393838;
 }
 
+.weather__ico {
+  width: 75px;
+  height: 75px;
+  background-size: 100%;
+}
+
 .curr__temp {
-  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.temp__text {
+  font-size: 22px;
+  color: #393838;
+  margin: 0 10px 0 0;
 }
 
 .temp__value {
