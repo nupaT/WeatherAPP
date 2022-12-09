@@ -136,14 +136,25 @@ body {
   border: 2px solid #000;
 }
 
-.city__name {
-  margin: 20px 0 0 0;
+.card__desc {
+  margin: 0 10px;
 }
 
-.curr__city {
+.city__name {
+  margin: 20px 0 0 0;
+  text-align: center;
+}
+
+.curr__city,
+.clouds__desc {
   font-size: 30px;
   font-weight: 500;
   color: #393838;
+}
+
+.curr__ico {
+  display: flex;
+  justify-content: center;
 }
 
 .weather__ico {
@@ -152,10 +163,16 @@ body {
   background-size: 100%;
 }
 
-.curr__temp {
+.curr__temp,
+.feels__temp {
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
+}
+
+.feels__temp {
+  margin: 10px 0 0 0;
 }
 
 .temp__text {
@@ -168,4 +185,9 @@ body {
   font-size: 35px;
   font-weight: 600;
   color: #fff;
+}
+
+.clouds {
+  margin: 10px 0 0 0;
+  text-align: left;
 }
