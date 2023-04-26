@@ -6,15 +6,6 @@ const stats = document.querySelector("status");
 const currCity = document.getElementById("currCity");
 const tempValue = document.getElementById("tempValue");
 
-let cityList = []
-fetch('../gz/city.list.json')
-  .then((response) => response.json())
-  .then((json) => cityList.push(json.forEach(name  => {
-    return name;
-  })));
-
-// console.log('cityList === ',cityList);
-
 
 // let url = `http://api.openweathermap.org/geo/1.0/direct?q=${city},BY&appid=9852ba4ce54f5e1ee00dcc5331937ad8`;
 // let url1 =
